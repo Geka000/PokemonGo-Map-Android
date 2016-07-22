@@ -1,0 +1,1 @@
+include ':pokemonlib', ':s2-geometry-library-java', ':app'

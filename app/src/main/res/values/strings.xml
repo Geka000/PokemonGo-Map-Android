@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PokemonGoMap</string>
+    <string name="title_activity_maps">PokemonGo Map</string>
+    <string name="action_logout_title">Logout</string>
+    <string name="dialog_ok">ok</string>
+    <string name="dialog_cancel">cancel</string>
+    <string name="hint_login">Trainer Club login</string>
+    <string name="hint_password">Password</string>
+    <string name="dialog_field_required">field required</string>
+    <string name="message_found_count" formatted="false">found %d pokemons</string>
+    <string name="message_network_error" formatted="false">network error</string>
+    <string name="text_create_account">You can create account here https://club.pokemon.com/us/pokemon-trainer-club/sign-up</string>
+</resources>

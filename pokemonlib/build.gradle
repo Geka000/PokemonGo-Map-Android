@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'com.google.protobuf'
+
+protobuf {
+    protoc {
+        path = '/usr/local/bin/protoc'
+        generatedFilesBaseDir = "$projectDir/src"
+    }
+}
+
+dependencies {
+    compile 'com.google.protobuf:protobuf-java:2.6.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'org.json:json:20160212'
+    compile project(':s2-geometry-library-java')
+
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
+}
