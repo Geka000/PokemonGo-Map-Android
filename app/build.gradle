@@ -36,13 +36,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [ "fabric_key":secret['fabric_key'], "google_map_key":secret['google_map_key'] ]
     }
-    //android:value="@string\/google_maps_key"
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
 
     signingConfigs {
         release {
@@ -50,6 +43,14 @@ android {
             storePassword secret['KEYSTORE_PASS']
             keyAlias secret['ALIAS_NAME']
             keyPassword secret['ALIAS_PASS']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
